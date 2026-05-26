@@ -1,0 +1,34 @@
+name: yamnet_test
+description: YAMNet 기반 씹는 소리 감지 프로그램
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  permission_handler: ^11.3.1
+
+  # 9.x 후기 버전: toStream에 StreamSink<Uint8List>를 받음
+  flutter_sound: ^9.28.0
+
+  # 0.11.0 이상이어야 최신 Dart SDK와 호환됨
+  tflite_flutter: ^0.11.0
+
+  path_provider: ^2.1.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/yamnet.tflite
+    - assets/yamnet_class_map.csv
